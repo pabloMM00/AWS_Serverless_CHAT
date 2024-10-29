@@ -1,0 +1,48 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container, .chat-container {
+    width: 1000px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #2ea924;
+}
+
+.chat-box {
+    height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 980px;
+    background-color: #e8faf4;
+}
+
+.message {
+    margin-bottom: 5px;
+    padding: 4px; /* Espaciado interno para el mensaje */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 150%; /* Ancho del contenedor */
+    max-width: 90%; /* Máximo ancho para mantener un diseño responsivo */
+}
+button {
+    width: 10%; /* Hace que el botón ocupe todo el ancho disponible */
+    height: 50px;
+}
+
+input[type="text"] {
+    width: calc(100% - 120px); /* Ajusta el ancho y resta el espaciado */
+    height: 50px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
