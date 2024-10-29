@@ -1,48 +1,46 @@
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #f0f0f0;
 }
 
-.login-container, .chat-container {
-    width: 1000px;
-    padding: 20px;
+.chat-container {
+    width: 300px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     border-radius: 8px;
-    background-color: #2ea924;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.chat-box {
-    height: 500px;
-    overflow-y: auto;
+#chat-box {
+    height: 300px;
+    overflow-y: scroll;
     border: 1px solid #ddd;
-    margin-bottom: 10px;
     padding: 10px;
-    width: 980px;
-    background-color: #e8faf4;
-}
-
-.message {
-    margin-bottom: 5px;
-    padding: 4px; /* Espaciado interno para el mensaje */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 150%; /* Ancho del contenedor */
-    max-width: 90%; /* Máximo ancho para mantener un diseño responsivo */
-}
-button {
-    width: 10%; /* Hace que el botón ocupe todo el ancho disponible */
-    height: 50px;
+    margin-bottom: 10px;
 }
 
 input[type="text"] {
-    width: calc(100% - 120px); /* Ajusta el ancho y resta el espaciado */
-    height: 50px;
-    border-radius: 5px; /* Bordes redondeados */
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }
 
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+button:hover {
+    background-color: #0056b3;
+}
