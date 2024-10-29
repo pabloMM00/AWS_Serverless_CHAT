@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat de Ingreso</title>
+    <title>Chat Serverless - Inicio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Bienvenido al Chat</h2>
-        <form id="loginForm" action="chat.html" method="get">
-            <label for="username">Nombre de Usuario:</label>
-            <input type="text" id="username" name="username" required>
-            <button type="submit">Entrar al Chat</button>
-        </form>
+    <div class="container">
+        <h1>Bienvenido al Chat Serverless</h1>
+        <input type="text" id="username" placeholder="Tu nombre" />
+        <input type="text" id="userColor" placeholder="Color (ej: #ff0000)" />
+        <button onclick="enterChat()">Entrar al Chat</button>
     </div>
+    <script>
+        function enterChat() {
+            const username = document.getElementById("username").value;
+            const userColor = document.getElementById("userColor").value || "#000000";
+
+            if (!username) {
+                alert("Por favor, ingresa tu nombre.");
+                return;
+            }
+
+            // Guarda los valores en localStorage para usarlos en chat.html
+            localStorage.setItem("username", username);
+            localStorage.setItem("userColor", userColor);
+
+            // Redirige al chat
+            window.location.href = "chat.html";
+        }
+    </script>
 </body>
 </html>
+
